@@ -1,0 +1,496 @@
+/* vert = #7fbb00 */
+
+/* --- Font-Face --- */
+@font-face {
+	font-family: 'ka1';
+	src: url("font/ka1.ttf");
+}
+
+@font-face {
+	font-family: 'Lato-Black';
+	src: url('font/Lato-Black.eot');
+	src: local('Lato Black'), local('Lato-Black'), url('font/Lato-Black.ttf') format('truetype'),
+	     url('font/Lato-Black.woff') format('woff'),
+	     url('font/Lato-Black.woff2') format('woff2'),
+	     url('font/Lato-Black.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato-Thin';
+	src: url('font/Lato-Thin.eot');
+	src: local('Lato Thin'), local('Lato-Thin'), url('font/Lato-Thin.ttf') format('truetype'),
+	     url('font/Lato-Thin.woff') format('woff'),
+	     url('font/Lato-Thin.woff2') format('woff2'),
+	     url('font/Lato-Thin.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato-Bold';
+	src: url('font/Lato-Bold.eot');
+	src: local('Lato Bold'), local('Lato-Bold'), url('font/Lato-Bold.ttf') format('truetype'),
+	     url('font/Lato-Bold.woff') format('woff'),
+	     url('font/Lato-Bold.woff2') format('woff2'),
+	     url('font/Lato-Bold.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'prismfont_CLv3';
+	src: url('font/prismfont_CLv3.ttf');
+}
+@font-face {
+	font-family: 'blocked';
+	src: url('font/blocked.ttf');
+}
+@font-face {
+	font-family: 'typo_pixel';
+	src: url('font/typo_pixel.ttf');
+}
+/* --- */
+
+BODY {
+	font-family: "Lato-Thin", "Lato Thin", sans-serif !important;
+	direction: ltr;
+	color: #1b1d1e;
+	font-size: 100%;
+}
+img.logo {
+	padding:5px;
+	width:60px;
+	background-color:#FFF;
+	border-radius:30px;
+	margin-right: 10px;
+}
+h2 {
+	font-family: "Lato-Bold", "Lato Black", sans-serif !important;
+}
+#top-nav ul {
+	margin-top: 25px;
+}
+
+h1 a span.titre-piratebox, h1 a:hover {
+	text-decoration: none;
+}
+h1 a span.titre-piratebox:hover {
+	text-decoration: none;
+	color: #7fbb00;
+}
+
+@media screen and (max-width: 800px) {
+	#top-nav ul li a img {
+		margin-bottom:10px;
+		margin-right: 16px;
+	}
+}
+
+/**/
+
+* {
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, object, iframe, fieldset {
+  border: 0;
+}
+
+/**/
+.titre-piratebox {
+	color:#FFF;
+	font-size:2.5em;
+	font-family: 'Lato-Black';
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+header, footer, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+
+legend {
+  display: none;
+}
+
+h1 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: auto;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: auto;
+  margin: 0 0 0.25em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: auto;
+  margin: 0 0 0.25em;
+}
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0 0 1em;
+}
+
+a {
+  color: /*#ad000b*/ #7fbb00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.current {
+  color: white;
+}
+
+#top-nav a {
+  display: block;
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+/**/
+#top-nav li {
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+input {
+  font-size: .75em;
+}
+
+label {
+  color: white;
+  font-size: .75em;
+}
+
+footer {
+  color: #e7e9ea;
+}
+
+.message date {
+  font-size: .625em;
+  color: #979ea1;
+}
+.message name {
+  font-size: .75em;
+  font-weight: bold;
+}
+.message data {
+  font-size: .75em;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.orange {
+  color: #ff8040;
+}
+
+body {
+  background: #e7e9ea;
+}
+
+header/*, footer*/ {
+  background: #1b1d1e;
+}
+/**/
+footer { background: #333; }
+/**/
+header img, footer img {
+  vertical-align: bottom;
+}
+
+#logo {
+  float: left;
+  overflow: hidden;
+}
+
+#menu-icon {
+  float: right;
+  width: 36px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#top-nav {
+  clear: both;
+  display: none;
+  padding: 1em 0 0 0;
+}
+
+#thanks {
+  float: right;
+}
+
+#upload iframe {
+  border: 1px solid #979ea1;
+  border-radius: 3px;
+  margin: 0 0 1em;
+}
+
+#shoutbox {
+  height: 350px;
+  overflow: auto;
+  width: 100%;
+  border: 1px solid #979ea1;
+  border-radius: 3px;
+  margin: 0 0 1em;
+  padding: 0.5em;
+}
+#shoutbox .message {
+  margin: 0 0 .25em 0;
+}
+
+#shoutbox-input {
+  margin: 0 0 1em 0;
+}
+#shoutbox-input .nickname,
+#shoutbox-input .message,
+#shoutbox-input .button {
+  width: 100%;
+}
+
+#shoutbox-options label {
+  float: left;
+  overflow: hidden;
+  border-radius: 3px;
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.5em 1em;
+}
+#shoutbox-options label input {
+  margin: 0 .5em 0 0;
+}
+#shoutbox-options .bg-black {
+  background: #1b1d1e;
+}
+#shoutbox-options .bg-blue {
+  background: /*blue*/ #005696;
+}
+#shoutbox-options .bg-green {
+  background: /*green*/ #6cbc35;
+}
+#shoutbox-options .bg-orange {
+  background: /*#ff8040*/ #ed7902;
+}
+#shoutbox-options .bg-red {
+  background: /*red*/ #bc0024;
+}
+
+input {
+  height: 3em;
+  border: 1px solid #979ea1;
+  border-radius: 3px;
+  margin: 0 0 1em;
+  padding: 0 0.5em;
+}
+
+input[type=radio] {
+  height: 1.3em;
+  margin: 0 .5em 0 0;
+}
+
+.button {
+  background: #979ea1;
+  border: 0;
+  color: white;
+  margin: 0;
+  font-family: 'Lato-Bold';
+  text-transform: uppercase;
+}
+
+.button:active {
+  background: #7c8589;
+  color: #cccccc;
+  -webkit-box-shadow: #4b5154 0px -3px 0px inset;
+  -moz-box-shadow: #4b5154 0px -3px 0px inset;
+  box-shadow: #4b5154 0px -3px 0px inset;
+}
+
+/**/
+.button:hover {
+	background-color: #7fbb00;
+}
+/**/
+
+.card {
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: #979ea1 0px 3px 0px;
+  -moz-box-shadow: #979ea1 0px 3px 0px;
+  box-shadow: #979ea1 0px 3px 0px;
+  margin: 0 0 1em;
+  padding: 1em;
+}
+
+.container {
+  height: 100%;
+  padding: 1em;
+  width: 100%;
+}
+
+.list table {
+  width: 100%;
+}
+.list table thead {
+  text-align: left;
+}
+.list table tbody tr {
+  height: 2em;
+  vertical-align: middle;
+}
+.list table tbody tr:hover {
+  background: #e7e9ea;
+}
+.list table .m, .list table .s, .list table .t {
+  display: none;
+}
+
+@media screen and (min-width: 801px) {
+  #logo {
+    margin: 0 2em 0 0;
+  }
+
+  #menu-icon {
+    display: none;
+  }
+
+  #top-nav {
+    clear: none;
+    display: table-cell;
+    padding: 0;
+    vertical-align: middle;
+  }
+  #top-nav ul li {
+    float: left;
+  }
+  #top-nav ul li a {
+    margin: 0 1em 0 0;
+    padding: 0;
+    /**/
+    font-size: 1.3em;
+  }
+  /**/
+  #top-nav ul li a img {
+	  margin-bottom:8px;
+  }
+  /**/
+
+  #sidebar {
+    float: right;
+    width: 40%;
+  }
+
+  #main {
+    float: left;
+    padding: 0 1em 0 0;
+    width: 60%;
+  }
+
+  #shoutbox-input .nickname {
+    float: left;
+    margin: 0 1em 0 0;
+    width: 20%;
+  }
+  #shoutbox-input .message {
+    float: left;
+    margin: 0 1em 0 0;
+    width: 60%;
+  }
+  #shoutbox-input .button {
+    float: right;
+    margin: 0;
+    width: 15%;
+  }
+
+  .to-top {
+    display: none;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+  }
+
+  .list table .m,
+  .list table .s,
+  .list table .t {
+    display: table-cell;
+  }
+}
+
+/*
+Progress bar used from the Bootstrap Library:
+https://github.com/twbs/bootstrap
+
+Licensed under the MIT license.
+*/
+
+.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.progress-bar {
+    float: left;
+    width: 0px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFF;
+    text-align: center;
+    background-color: #337AB7;
+    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15) inset;
+    transition: width 0.6s ease 0s;
+}

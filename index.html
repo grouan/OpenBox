@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	
+	<title>OpenBox - Partagez librement !</title>
+	
+	<script src="jquery.min.js"></script>
+	<script src="scripts.js"></script>
+	<script src="jquery-ui.min.js"></script>
+       	
+       <link rel="stylesheet" href="jquery-ui.min.css" />
+	<link rel="stylesheet" href="style.css" />
+       <link rel="stylesheet" href="img/font-awesome/css/font-awesome.min.css">
+       
+	<meta charset="utf-8" />
+       <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+       
+</head>
+
+<body id="main-index">
+
+<header id="header">
+	<div class="container">
+		<div id="logo">
+			<h1>
+				<a href="/">
+					<!--<img src="img/hulk.png" alt="PirateBox" title="PirateBox - Share Freely" style="padding:5px;width:60px;background-color:#FFF;border-radius:30px;" />-->
+                                   <script type="text/javascript" language="javascript">{ document.write('<img src="img/logo/'+ Math.round((Math.random()*9)+1)+ '.png" alt="Pi(rate)Box - Share Freely" class="logo" />'); }</script>
+                                   
+                                   <span class="titre-piratebox">OpenBox</span>
+				</a>
+			</h1>
+		</div>
+		<div id="menu-icon"><img src="menu.png" alt="Menu" /></div>
+		<nav id="top-nav">
+                     <ul>
+				<li><a href="/" class="current"><img src="img/graphic-card.png" /> Accueil</a></li>
+				<li><a href="/board/" target="_blank"><img src="img/cup-tea.png" /> Forum</a></li>
+				<li><a href="/Shared/"><img src="img/hamburger.png" /> Fichiers</a></li>
+				<li><a href="#about"><img src="img/rocket-fly.png" /> &Agrave; propos</a></li>
+			</ul>
+		</nav>
+	</div>       
+</header>
+
+<section id="content">
+	<div class="container">
+		<div id="welcome">
+			<div id="greeting" class="card">
+				<h2><span style="color:#7fbb00;">\(=^_^=)/</span> Bienvenue !</h2>
+				<p><img src="img/bill_murray_ghostbusters.gif" style="float:left;margin:0px 20px 0px 0px;border-radius:3px;max-width:100%;" />Vous êtes désormais connecté(e) à l'<strong>OpenBox</strong> <img src="img/network-wireless.png" />.<br /><br />Il s'agit d'un espace collaboratif & ouvert vous permettant de partager des ressources avec les personnes qui sont autour de vous. Vous pouvez ainsi — si vous le souhaitez — <strong>contribuer activement à cette session</strong>, partager ou télécharger des documents, échanger sur les thématiques qui vous intéressent, discuter les points de blocage, approfondir collectivement certains sujets, <i>etc</i> !</p>
+				<input id="thanks" class="button" type="submit" value="À vous de jouer !">
+			</div>
+		</div>
+		<div id="sidebar">
+			<div id="upload" class="card" style="background-color:#7fbb00;">
+				<h2 style="text-transform:uppercase;color:#FFF;"><img src="img/inbox-upload.png" /> Ajoutez des fichiers</h2>
+				<iframe width="100%" height="80" src='http://piratebox.lan:8080' style='border:0px'>
+					Votre navigateur est allergique aux iframes&hellip; Pour téléverser des fichiers, rendez vous <a href='http://piratebox.lan:8080'>ici</a>.
+				</iframe>
+                            <div style="color: #333;font-size:0.8em;margin-bottom:10px;text-align:center;"><img src="img/information-italic.png" /> Si votre navigateur est allergique aux iframes<br />rendez vous <a href='http://piratebox.lan:8080' target="_blank" style="color:#333;">ici pour téléverser des fichiers</a>.</div>
+				<h3 style="text-align:center;font-size:1.1em;color:#FFF;"><a href="/Shared" style="color:#FFF;"><img src="img/hamburger.png" /> Consultez tous les fichiers</a></h3>
+				<div id="station"></div>
+			</div>
+			<div id="diskusagecard" class="card">
+				<h2 style="text-transform:uppercase;color:#7fbb00;"><img src="img/brain.png" /> Espace disque</h2>
+				<div id="diskusage"></div>
+				<div id="refresh-diskusage">
+					<form method="POST" name="diskusage" id="du_form" >
+						<input class="button" type="submit" name="refresh" value="Rafra&icirc;chir" id="du_form_button" title="Le taux d'utilisation du disque ne peut s'actualiser que toutes les 5 min">
+					</form>
+				</div>
+			</div>
+                     <div id="station" class="card"></div> 
+
+		</div>
+
+		<div id="main">
+			<div id="chat" class="card">
+				<h2 style="text-transform:uppercase;color:#7fbb00;"><img src="img/sofa.png" /> Tchat(ch)ez</h2>
+                            <div style="color: #666;font-size:0.8em;margin-bottom:10px;">Les échanges ne seront accessibles que pendant la durée de cette session. Vous pouvez par ailleurs choisir une couleur pour vous identifier, indiquer votre prénom ou préférer rester anonyme&hellip;</div>
+				<div id="shoutbox" class="shoutbox_content"></div>
+				<form method="POST" name="psowrte" id="sb_form" >
+					<div id="shoutbox-input">
+						<input class="nickname" type="text" name="name" value="Anonymous" placeholder="Nickname" />
+						<input class="message" type="text" name="data" placeholder="Votre message&hellip;" />
+						<input class="button" type="submit" name="submit" value="Envoyer" id="send-button" />
+					</div>
+					<div id="shoutbox-options">
+						<h3>Choisissez votre couleur :</h3>
+						<label for="def" 	class="bg-black"><input name="color" type="radio" value="def" id="def" checked />Noir</label>
+						<label for="blue" 	class="bg-blue"><input name="color" type="radio" value="blue" id="blue" />Bleu</label>
+						<label for="green" 	class="bg-green"><input name="color" type="radio" value="green" id="green" />Vert</label>
+						<label for="orange" class="bg-orange"><input name="color" type="radio" value="orange" id="orange" />Orange</label>
+						<label for="red" 	class="bg-red"><input name="color" type="radio" value="red" id="red" />Rouge</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer id="about">
+	<div class="container" style="background-color: #333;">
+		<div id="details">
+			<p class="to-top"><a href="#header"><img src="img/bug.png" style="margin-bottom:4px;" /> Haut de page</a></p>
+			<h2><img src="img/rocket-fly.png" style="margin-bottom:7px;" /> À propos d'OpenBox</h2>
+			<p style="font-size:0.8em;text-align:justify;border-bottom:1px solid #444;padding-bottom: 20px;">Inspirée par la Pi(rate)Box du designer américain David Darts, lui-même inspiré des radios pirates et des cultures libres, <strong>OpenBox</strong> est un outil nomade d'échange collaboratif. Sous licence libre, gratuite et Open Source, elle crée un réseau sans fil de partage où les utilisateurs peuvent anonymement échanger des documents, des images, des vidéos et toutes sortes de contenus numériques. <strong>OpenBox</strong> est conçue pour être sûre et sécurisée, accessible depuis n'importe quel type d'&eacute;cran (smartphone, tablette, portable...). Aucun identifiant n'est nécessaire et aucune donnée utilisateur n'est conservée. Le réseau n'est pas connecté à Internet afin d'empêcher le traçage numérique et de préserver votre anonymat :)</p>
+                     <p style="color:#7fbb00;" title="Ici, vous n'êtes pas connecté(e) à Internet..."><i class="fa fa-twitter fa-fw" style="vertical-align: middle;" aria-hidden="true"></i> <i class="fa fa-linkedin fa-fw" style="vertical-align: middle;" aria-hidden="true"></i> <i class="fa fa-instagram fa-fw" style="vertical-align: middle;" aria-hidden="true"></i> <i class="fa fa-snapchat-ghost fa-fw" style="vertical-align: middle;" aria-hidden="true"></i> @grouan | <i class="fa fa-globe fa-fw" style="vertical-align: middle;" aria-hidden="true"></i> guillaume-rouan.net</p>
+		</div>
+	</div>
+       <div style="text-align:center;color:#444;background-color:#1b1d1e;padding: 10px;text-transform:uppercase;font-size:0.8em;margin-top: -20px;">
+		<img src="img/wi-fi-zone.png" /> OpenBox 2016 | Design Hack by Guillaume ROUAN | Sources from Pi(rate)Box v1.0.7
+	</div>
+</footer>
+
+</body>
+
+</html>
