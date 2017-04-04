@@ -1,0 +1,43 @@
+<head>
+	
+	<title>OpenBox - Partagez librement !</title>
+	
+	<script src="../jquery.min.js"></script>
+	<script src="../scripts.js"></script>
+	<script src="../jquery-ui.min.js"></script>
+       	
+       <link rel="stylesheet" href="../jquery-ui.min.css" />
+	<link rel="stylesheet" href="../style.css" />
+       <link rel="stylesheet" href="../img/font-awesome/css/font-awesome.min.css">
+       
+	<meta charset="utf-8" />
+       <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+       
+</head>
+
+<body id="main-index">
+
+<header id="header">
+	<div class="container">
+		<div id="logo">
+			<h1>
+				<a href="/">
+                                   <script type="text/javascript" language="javascript">{ document.write('<img src="../img/logo/'+ Math.round((Math.random()*9)+1)+ '.png" alt="OpenBox" class="logo" />'); }</script>
+                                   
+                                   <span class="titre-piratebox">OpenBox</span>
+				</a>
+			</h1>
+		</div>
+		<div id="menu-icon"><img src="../menu.png" alt="Menu" /></div>
+		<nav id="top-nav">
+                     <ul>
+				<li><a href="/" class="current"><img src="../img/graphic-card.png" /> Accueil</a></li>
+				<li><a href="/board/"><img src="../img/cup-tea.png" /> Forum</a></li>
+				<li><a href="/Shared/"><img src="../img/hamburger.png" /> Fichiers</a></li>
+				<li><a href="/#about"><img src="../img/rocket-fly.png" /> &Agrave; propos</a></li>
+			</ul>
+		</nav>
+	</div>       
+</header>
+<div class="container">
+		<div class="card">
